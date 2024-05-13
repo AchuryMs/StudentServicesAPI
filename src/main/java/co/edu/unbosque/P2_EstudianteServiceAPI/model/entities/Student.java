@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idNumber;
+    private Integer idNumber;
     @Column
     private String name;
     @Column
@@ -20,18 +20,18 @@ public class Student {
     public Student() {
     }
 
-    public Student(Long idNumber, String name, String program, Status status) {
+    public Student(Integer   idNumber, String name, String program, Status status) {
         this.idNumber = idNumber;
         this.name = name;
         this.program = program;
         this.status = status;
     }
 
-    public Long getIdNumber() {
+    public Integer getIdNumber() {
         return idNumber;
     }
 
-    public void setIdNumber(Long idNumber) {
+    public void setIdNumber(Integer idNumber) {
         this.idNumber = idNumber;
     }
 
